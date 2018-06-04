@@ -55,9 +55,7 @@ $(document).ready(function()
 		  url: '/clients',
 		  data: formData,
 		  success: function(data, textStatus) {
-		  	if(Number.isInteger(data)) {
-		  		$("#estate_contact_form").submit();
-		  	}
+		  	$("#estate_contact_form").submit();
 		  }
 		});
 	});
