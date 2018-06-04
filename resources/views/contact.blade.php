@@ -47,7 +47,8 @@
 								<textarea id="estate_contact_form_message" class="estate_text_field estate_contact_form_message" name="message" placeholder="How did you find out about us?"></textarea>
 								<input id="estate_contact_form_budget" class="estate_input_field estate_contact_form_subject" type="number" placeholder="Budget" name="budget" min="0" step="0">
 								<input type="text" name="_gotcha" style="display:none" />
-								<button id="estate_contact_send_btn"  class="estate_contact_send_btn trans_200" value="Submit">send</button>
+								<div id="estate_contact_send_btn"  class="estate_contact_send_btn trans_200" value="Submit">send</div>
+								<meta name="csrf-token" content="{{ csrf_token() }}">
 							</form>
 						</div>
 					</div>

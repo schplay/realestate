@@ -32,3 +32,4 @@ Route::get('/listing', function () {
 Route::get('/news', function () {
     return view('news');
 });
+Route::resource('clients', 'ClientController');

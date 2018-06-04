@@ -16,6 +16,12 @@ $(document).ready(function()
 {
 	"use strict";
 
+	$.ajaxSetup({
+		headers: {
+		    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+		}
+	});
+
 	/* 
 
 	1. Vars and Inits
@@ -24,7 +30,7 @@ $(document).ready(function()
 
 	var menuActive = false;
 	var header = $('.header');
-	var map;
+	
 
 	setHeader();
 
@@ -39,7 +45,22 @@ $(document).ready(function()
 	});
 
 	initMenu();
-	initGoogleMap();
+	
+
+	$('#estate_contact_send_btn').on('click', function(e) {
+		var formData = $('form').serialize();
+
+		$.ajax({
+		  type: "POST",
+		  url: '/clients',
+		  data: formData,
+		  success: function(data, textStatus) {
+		  	if(Number.isInteger(data)) {
+		  		$("form").submit();
+		  	}
+		  }
+		});
+	});
 
 	/* 
 

@@ -607,6 +607,8 @@ section
 	cursor: pointer;
 	border: none;
 	margin-top: 39px;
+	text-align: center;
+    line-height: 32px;
 }
 .estate_contact_send_btn:focus
 {
