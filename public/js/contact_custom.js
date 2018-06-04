@@ -56,7 +56,7 @@ $(document).ready(function()
 		  data: formData,
 		  success: function(data, textStatus) {
 		  	if(Number.isInteger(data)) {
-		  		$("form").submit();
+		  		$("#estate_contact_form").submit();
 		  	}
 		  }
 		});
