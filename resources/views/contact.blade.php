@@ -39,12 +39,15 @@
 					<div class="estate_contact_form">
 						<div class="contact_title">say hello</div>
 						<div class="estate_contact_form_container">
-							<form id="estate_contact_form" class="estate_contact_form" action="post">
-								<input id="estate_contact_form_name" class="estate_input_field estate_contact_form_name" type="text" placeholder="Name" required="required" data-error="Name is required.">
-								<input id="estate_contact_form_email" class="estate_input_field estate_contact_form_email" type="email" placeholder="E-mail" required="required" data-error="Valid email is required.">
-								<input id="estate_contact_form_subject" class="estate_input_field estate_contact_form_subject" type="email" placeholder="Subject" required="required" data-error="Subject is required.">
-								<textarea id="estate_contact_form_message" class="estate_text_field estate_contact_form_message" name="message" placeholder="Message" required="required" data-error="Please, write us a message."></textarea>
-								<button id="estate_contact_send_btn" type="submit" class="estate_contact_send_btn trans_200" value="Submit">send</button>
+							<form id="estate_contact_form" class="estate_contact_form" action="https://formspree.io/david.d.myers@gmail.com" method="POST">
+								<input id="estate_contact_form_name" class="estate_input_field estate_contact_form_name" type="text" placeholder="Name" required="required" data-error="Name is required." name="name">
+								<input id="estate_contact_form_email" class="estate_input_field estate_contact_form_email" type="email" placeholder="E-mail" required="required" data-error="Valid email is required." name="email">
+								<input id="estate_contact_form_address" class="estate_input_field estate_contact_form_subject" type="text" placeholder="Address" name="address">
+								<input id="estate_contact_form_phone" class="estate_input_field estate_contact_form_subject" type="text" placeholder="Phone Number" name="phone">
+								<textarea id="estate_contact_form_message" class="estate_text_field estate_contact_form_message" name="message" placeholder="How did you find out about us?"></textarea>
+								<input id="estate_contact_form_budget" class="estate_input_field estate_contact_form_subject" type="number" placeholder="Budget" name="budget" min="0" step="0">
+								<input type="text" name="_gotcha" style="display:none" />
+								<button id="estate_contact_send_btn"  class="estate_contact_send_btn trans_200" value="Submit">send</button>
 							</form>
 						</div>
 					</div>
